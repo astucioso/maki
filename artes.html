@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artes - Comissões da Maki</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Cursor customizado global */
+        body {
+            cursor: url('images/cursor.png'), auto; /* Certifique-se de que a imagem cursor.png está na pasta 'images' */
+        }
+
+        /* Cursor customizado para links */
+        a {
+            cursor: url('images/hover-pointer.png'), pointer; /* Certifique-se de que a imagem hover-pointer.png está na pasta 'images' */
+        }
+    </style>
+
 </head>
 <body>
     <header>
@@ -12,10 +25,12 @@
     </header>
 
     <nav>
-        <a href="index.html">Início</a>
-        <a href="artes.html">Artes</a>
-        <a href="valores.html">Valores</a>
-        <a href="contato.html">Contato</a>
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="artes.html" class="nav-link">Artes</a>
+        <a href="valores.html" class="nav-link">Valores</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+    </nav>
+
     </nav>
 
     <main>
@@ -47,3 +62,70 @@
     </footer>
 </body>
 </html>
+<head>
+  <!-- Conectar ao Google Fonts para carregar a fonte Teko -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+  <!-- Contêiner para as partículas -->
+  <div id="tsparticles"></div>
+
+  <!-- Script para as partículas -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.40.0"></script>
+  <script>
+      tsParticles.load("tsparticles", {
+          particles: {
+              number: {
+                  value: 100,  // Número de partículas
+                  density: {
+                      enable: true,
+                      value_area: 800  // Área onde as partículas serão distribuídas
+                  }
+              },
+              color: {
+                  value: "#ffffff"  // Cor das partículas (Rosa)
+              },
+              shape: {
+                  type: "circle"  // Forma das partículas
+              },
+              opacity: {
+                  value: 0.5,  // Opacidade das partículas
+                  random: true,
+                  anim: {
+                      enable: true,
+                      speed: 1,
+                      opacity_min: 0.1
+                  }
+              },
+              size: {
+                  value: 5,  // Tamanho das partículas
+                  random: true,
+                  anim: {
+                      enable: true,
+                      speed: 40,
+                      size_min: 0.1
+                  }
+              },
+              links: {
+                  enable: true,
+                  distance: 150,
+                  color: "#f1a7c2",  // Cor da linha de ligação (rosa)
+                  opacity: 0.4,
+                  width: 1
+              },
+              move: {
+                  enable: true,
+                  speed: 6,
+                  direction: "none",
+                  random: true,
+                  straight: false,
+                  outModes: {
+                      default: "out"
+                  }
+              }
+          },
+          retina_detect: true  // Ativa a detecção de alta resolução
+      });
+  </script>

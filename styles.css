@@ -8,18 +8,35 @@
 /* Corpo */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8c8d8;
+    background-color: rgba(241, 167, 194, 0.8);  /* Fundo semi-transparente */
+    background-size: cover;                    /* Faz a imagem cobrir toda a tela */
+    background-position: center center;        /* Centraliza a imagem */
+    background-repeat: no-repeat;              /* Não repete a imagem */
     color: #333;
     min-width: 320px; /* Garantir largura mínima */
     display: flex;
     flex-direction: column;
     align-items: center; /* Alinhamento central */
     justify-content: flex-start;
+    position: relative; /* Necessário para o posicionamento do fundo de partículas */
+    overflow-x: hidden; /* Previne rolagem horizontal */
+    
+    cursor: url('images/cursor.png'), auto; /* Adiciona o cursor customizado globalmente */
+}
+
+/* Contêiner das partículas */
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca as partículas atrás do conteúdo */
 }
 
 /* Cabeçalho */
 header {
-    background-color: #f1a7c2;
+    background-color: #ff00a6(241, 167, 194, 0.8);  /* Fundo semi-transparente */
     padding: 50px 20px;
     text-align: center;
     width: 100%;
@@ -39,7 +56,7 @@ header p {
 
 /* Navegação */
 nav {
-    background-color: #f1a7c2;
+    background-color: #ff00a6(241, 167, 194, 0.8);  /* Fundo semi-transparente */
     display: flex;
     justify-content: center;
     padding: 15px 0;
@@ -54,10 +71,16 @@ nav a {
     font-weight: bold;
     font-size: 1.1em;
     text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 8px; /* Deixa o botão arredondado */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #ff00a6; /* Cor de fundo no hover */
+    color: white; /* Mantém o texto branco */
+    text-decoration: none; /* Remove o sublinhado */
+    cursor: pointer;
 }
 
 /* Hero Section (Página inicial) */
@@ -116,7 +139,7 @@ nav a:hover {
 /* Botões */
 button, .button, .button-discord {
     display: inline-block;
-    background-color: #7289da; /* Discord Blue */
+    background-color: #ff00a6; /* Cor principal do botão */
     color: white;
     padding: 12px 25px;
     border-radius: 8px;
@@ -131,8 +154,13 @@ button, .button, .button-discord {
 }
 
 button:hover, .button:hover, .button-discord:hover {
-    background-color: #5b6e99; /* Darker Discord Blue */
+    background-color: #ff66b2; /* Cor de fundo ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:focus, .button:focus, .button-discord:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 0, 166, 0.5); /* Borda visível ao focar o botão */
 }
 
 /* Centralizando o botão */
@@ -340,25 +368,4 @@ table tr:nth-child(even) td {
 table tr:hover td {
     background-color: #f1a7c2;
     color: white;
-}
-
-/* Ajustes para dispositivos móveis nas tabelas */
-@media (max-width: 768px) {
-    table {
-        width: 95%;
-    }
-
-    table th, table td {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    table {
-        width: 100%;
-    }
-
-    table th, table td {
-        font-size: 0.9em;
-    }
 }
