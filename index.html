@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        /* Cursor customizado global */
         body {
-            cursor: url('images/cursor.png'), auto; /* Certifique-se de que a imagem cursor.png está na pasta 'images' */
+            cursor: url('images/cursor.png'), auto;
         }
 
-        /* Cursor customizado para links */
         a {
-            cursor: url('images/hover-pointer.png'), pointer; /* Certifique-se de que a imagem hover-pointer.png está na pasta 'images' */
+            cursor: url('images/hover-pointer.png'), pointer;
         }
     </style>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -47,29 +48,27 @@
         <p>&copy; 2024 Comissões da Maki</p>
     </footer>
 
-    <!-- Contêiner para as partículas -->
     <div id="tsparticles"></div>
 
-    <!-- Script para as partículas -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.40.0"></script>
     <script>
         tsParticles.load("tsparticles", {
             particles: {
                 number: {
-                    value: 100,  // Número de partículas
+                    value: 100,
                     density: {
                         enable: true,
-                        value_area: 800  // Área onde as partículas serão distribuídas
+                        value_area: 800
                     }
                 },
                 color: {
-                    value: "#ffffff"  // Cor das partículas (Rosa)
+                    value: "#ffffff"
                 },
                 shape: {
-                    type: "circle"  // Forma das partículas
+                    type: "circle"
                 },
                 opacity: {
-                    value: 0.5,  // Opacidade das partículas
+                    value: 0.5,
                     random: true,
                     anim: {
                         enable: true,
@@ -78,7 +77,7 @@
                     }
                 },
                 size: {
-                    value: 5,  // Tamanho das partículas
+                    value: 5,
                     random: true,
                     anim: {
                         enable: true,
@@ -89,7 +88,7 @@
                 links: {
                     enable: true,
                     distance: 150,
-                    color: "#f1a7c2",  // Cor da linha de ligação (rosa)
+                    color: "#f1a7c2",
                     opacity: 0.4,
                     width: 1
                 },
@@ -104,15 +103,8 @@
                     }
                 }
             },
-            retina_detect: true  // Ativa a detecção de alta resolução
+            retina_detect: true
         });
     </script>
 </body>
 </html>
-<head>
-    <!-- Conectar ao Google Fonts para carregar a fonte Teko -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-
-</head>
